@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week Name Game: English to Arabic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #0066cc;
+        }
+        .game-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .day-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Week Name Game: English to Arabic</h1>
+        <p>Click on a day to see its Arabic translation!</p>
+        <button class="day-button" onclick="showTranslation('Sunday', 'الأحد')">Sunday</button>
+        <button class="day-button" onclick="showTranslation('Monday', 'الاثنين')">Monday</button>
+        <button class="day-button" onclick="showTranslation('Tuesday', 'الثلاثاء')">Tuesday</button>
+        <button class="day-button" onclick="showTranslation('Wednesday', 'الأربعاء')">Wednesday</button>
+        <button class="day-button" onclick="showTranslation('Thursday', 'الخميس')">Thursday</button>
+        <button class="day-button" onclick="showTranslation('Friday', 'الجمعة')">Friday</button>
+        <button class="day-button" onclick="showTranslation('Saturday', 'السبت')">Saturday</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function showTranslation(english, arabic) {
+            document.getElementById('result').innerHTML = english + " in Arabic is: " + arabic;
+        }
+    </script>
+</body>
+</html>
